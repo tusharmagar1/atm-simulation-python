@@ -26,3 +26,11 @@ A Python-based ATM Simulation built using Object-Oriented Programming and SQLite
 ```bash
 python main.py
 ```
+
+## Default PIN
+
+1234
+
+## Initial Balance
+
+₹10,000

@@ -1,0 +1,9 @@
+python_interpreter = "C:\\Program Files\\Python310\\python.exe"
+search_path = [
+    "."
+]
+project-excludes = [
+    "**/__pycache__/**",
+    "**/__pyrefly_virtual__/**",
+    "*__pyrefly_virtual__*"
+]
