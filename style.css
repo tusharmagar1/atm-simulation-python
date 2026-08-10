@@ -1,0 +1,925 @@
+/* ============================================================
+   FINTECH DESIGN SYSTEM (CSS) — ATM BANKING SIMULATION
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #2563EB;
+    --primary-dark: #1D4ED8;
+    --bg-main: #F5F7FB;
+    --surface: #FFFFFF;
+    --dark-surface: #0F172A;
+    --dark-surface-card: #1E293B;
+    --text-primary: #111827;
+    --text-secondary: #6B7280;
+    --border-color: #E5E7EB;
+    --success: #16A34A;
+    --success-bg: #DCFCE7;
+    --danger: #DC2626;
+    --danger-bg: #FEE2E2;
+    --warning: #D97706;
+    --warning-bg: #FEF3C7;
+}
+
+html, body, [class*="css"], .stApp {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    background-color: var(--bg-main) !important;
+    color: var(--text-primary);
+}
+
+/* ============================================================
+   STREAMLIT HEADER & TOOLBAR OVERLAYS (PREVENT CUTTING OFF)
+   ============================================================ */
+
+/* Make Streamlit top header completely transparent so it never obscures page content or nav bar */
+header[data-testid="stHeader"],
+[data-testid="stHeader"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    pointer-events: none !important;
+    z-index: 100 !important;
+}
+
+/* Enable pointer events on the sidebar collapse/expand controls */
+header[data-testid="stHeader"] button,
+header[data-testid="stHeader"] [data-testid="stSidebarCollapsedControl"],
+header[data-testid="stHeader"] [data-testid="collapsedControl"],
+[data-testid="stSidebarCollapsedControl"],
+[data-testid="collapsedControl"] {
+    pointer-events: auto !important;
+}
+
+/* Hide deploy button, toolbar, decoration, and menu icons */
+.stDeployButton,
+[data-testid="stAppDeployButton"],
+[data-testid="stToolbar"],
+[data-testid="stToolbarActions"],
+[data-testid="stDecoration"],
+[data-testid="stStatusWidget"],
+#MainMenu,
+footer {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    width: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Adequate top and bottom padding across all pages */
+.block-container {
+    padding-top: 2rem !important;
+    padding-bottom: 3.5rem !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    max-width: 1080px !important;
+}
+
+/* ----------------------------------------------------
+   Sidebar Collapsed Button (Prominent & High Contrast)
+---------------------------------------------------- */
+[data-testid="stSidebarCollapsedControl"],
+[data-testid="collapsedControl"] {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 999999 !important;
+    background: #0F172A !important;
+    color: #FFFFFF !important;
+    border: 1px solid #334155 !important;
+    border-radius: 10px !important;
+    padding: 6px 10px !important;
+    margin: 0.5rem !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.3) !important;
+    cursor: pointer !important;
+}
+
+[data-testid="stSidebarCollapsedControl"] *,
+[data-testid="collapsedControl"] *,
+[data-testid="stSidebarCollapsedControl"] svg,
+[data-testid="collapsedControl"] svg {
+    color: #FFFFFF !important;
+    fill: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+}
+
+[data-testid="stSidebarCollapsedControl"]:hover,
+[data-testid="collapsedControl"]:hover {
+    background: #1E293B !important;
+    border-color: #2563EB !important;
+}
+
+/* ----------------------------------------------------
+   Sidebar Navigation & Brand
+---------------------------------------------------- */
+[data-testid="stSidebar"] {
+    background: #0F172A !important;
+    background-color: #0F172A !important;
+    border-right: 1px solid #1E293B !important;
+}
+
+[data-testid="stSidebar"] * {
+    color: #E2E8F0;
+}
+
+.sidebar-brand-wrapper {
+    padding: 0.75rem 0.25rem 1.25rem 0.25rem;
+    border-bottom: 1px solid #1E293B;
+    margin-bottom: 1.25rem;
+}
+
+.sidebar-brand-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #FFFFFF !important;
+    letter-spacing: -0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.sidebar-brand-subtitle {
+    font-size: 0.75rem;
+    color: #94A3B8 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    margin-top: 0.25rem;
+}
+
+.sidebar-section-title {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #64748B !important;
+    letter-spacing: 0.08em;
+    margin: 1rem 0.25rem 0.6rem 0.25rem;
+}
+
+.sidebar-footer-box {
+    margin-top: 1.5rem;
+    padding: 0.75rem 0.25rem 0.25rem 0.25rem;
+    border-top: 1px solid #1E293B;
+}
+
+.status-badge-sidebar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #10B981 !important;
+    background: rgba(16, 185, 129, 0.12);
+    padding: 0.4rem 0.85rem;
+    border-radius: 9999px;
+    margin-bottom: 0.85rem;
+    border: 1px solid rgba(16, 185, 129, 0.25);
+    white-space: nowrap;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #10B981;
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(16, 185, 129, 0.4);
+    animation: pulseAnimation 2s infinite;
+    flex-shrink: 0;
+}
+
+@keyframes pulseAnimation {
+    0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+    70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* ============================================================
+   SIDEBAR BUTTONS STYLING (HIGH CONTRAST & VISIBILITY)
+   ============================================================ */
+
+[data-testid="stSidebar"] .stButton {
+    margin-bottom: 0.35rem !important;
+}
+
+/* Base style for all sidebar buttons */
+[data-testid="stSidebar"] .stButton > button,
+[data-testid="stSidebar"] button[data-testid^="baseButton"] {
+    width: 100% !important;
+    border-radius: 12px !important;
+    padding: 0.65rem 0.95rem !important;
+    text-align: left !important;
+    font-weight: 500 !important;
+    font-size: 0.9rem !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Inactive Sidebar Buttons */
+[data-testid="stSidebar"] .stButton > button,
+[data-testid="stSidebar"] button[kind="secondary"],
+[data-testid="stSidebar"] button[data-testid="baseButton-secondary"] {
+    background: rgba(255, 255, 255, 0.06) !important;
+    background-color: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #E2E8F0 !important;
+    box-shadow: none !important;
+}
+
+[data-testid="stSidebar"] .stButton > button *,
+[data-testid="stSidebar"] button[kind="secondary"] *,
+[data-testid="stSidebar"] button[data-testid="baseButton-secondary"] * {
+    color: #E2E8F0 !important;
+    font-weight: 500 !important;
+    text-align: left !important;
+}
+
+/* Hover on Inactive Sidebar Buttons */
+[data-testid="stSidebar"] .stButton > button:hover,
+[data-testid="stSidebar"] button[kind="secondary"]:hover,
+[data-testid="stSidebar"] button[data-testid="baseButton-secondary"]:hover {
+    background: #1E293B !important;
+    background-color: #1E293B !important;
+    border-color: #3B82F6 !important;
+    color: #FFFFFF !important;
+    transform: translateX(3px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25) !important;
+}
+
+[data-testid="stSidebar"] .stButton > button:hover *,
+[data-testid="stSidebar"] button[kind="secondary"]:hover *,
+[data-testid="stSidebar"] button[data-testid="baseButton-secondary"]:hover * {
+    color: #FFFFFF !important;
+}
+
+/* Active Sidebar Navigation Item (Primary) */
+[data-testid="stSidebar"] .stButton > button[kind="primary"],
+[data-testid="stSidebar"] button[data-testid="baseButton-primary"] {
+    width: 100% !important;
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%) !important;
+    background-color: #2563EB !important;
+    border: 1px solid #3B82F6 !important;
+    border-radius: 12px !important;
+    padding: 0.65rem 0.95rem !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4) !important;
+    transform: none !important;
+}
+
+[data-testid="stSidebar"] .stButton > button[kind="primary"] *,
+[data-testid="stSidebar"] button[data-testid="baseButton-primary"] * {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+}
+
+/* Sidebar Logout Button */
+[data-testid="stSidebar"] [data-testid="stVerticalBlock"] > div:last-child .stButton > button {
+    background: rgba(220, 38, 38, 0.12) !important;
+    background-color: rgba(220, 38, 38, 0.12) !important;
+    border: 1px solid rgba(220, 38, 38, 0.25) !important;
+    color: #FCA5A5 !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stVerticalBlock"] > div:last-child .stButton > button * {
+    color: #FCA5A5 !important;
+    font-weight: 600 !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stVerticalBlock"] > div:last-child .stButton > button:hover {
+    background: #DC2626 !important;
+    background-color: #DC2626 !important;
+    border-color: #EF4444 !important;
+    color: #FFFFFF !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stVerticalBlock"] > div:last-child .stButton > button:hover * {
+    color: #FFFFFF !important;
+}
+
+/* ============================================================
+   TOP HEADER BAR & HORIZONTAL NAVIGATION
+   ============================================================ */
+.top-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.15rem;
+    border-bottom: 1px solid #E2E8F0;
+    margin-bottom: 1.15rem;
+}
+
+.greeting-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #111827;
+    letter-spacing: -0.03em;
+    margin: 0;
+    line-height: 1.25;
+}
+
+.greeting-subtitle {
+    font-size: 0.88rem;
+    color: #64748B;
+    margin-top: 0.2rem;
+    font-weight: 400;
+}
+
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #059669;
+    background: #ECFDF5;
+    border: 1px solid #A7F3D0;
+    padding: 0.4rem 0.9rem;
+    border-radius: 9999px;
+    box-shadow: 0 1px 2px rgba(16, 185, 129, 0.08);
+}
+
+.status-dot-green {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10B981;
+}
+
+/* ----------------------------------------------------
+   Premium Hero Balance Card
+---------------------------------------------------- */
+.hero-balance-card {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 60%, #0F172A 100%);
+    border-radius: 20px;
+    padding: 2rem 2.25rem;
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 16px 28px -8px rgba(15, 23, 42, 0.28), 0 0 1px 1px rgba(255, 255, 255, 0.05);
+    margin-bottom: 1.5rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-balance-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 32px -8px rgba(15, 23, 42, 0.35);
+}
+
+.hero-balance-card::after {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.3) 0%, rgba(37, 99, 235, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.card-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.balance-badge-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #94A3B8;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.card-chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 24px;
+    background: linear-gradient(135deg, #D4AF37 0%, #AA7C11 100%);
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px rgba(255,255,255,0.4);
+}
+
+.balance-amount-display {
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: -0.04em;
+    margin: 0.2rem 0 0.6rem 0;
+    line-height: 1.1;
+}
+
+.card-footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.85rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card-footer-text {
+    font-size: 0.8rem;
+    color: #94A3B8;
+}
+
+.card-sync-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    color: #38BDF8;
+    font-weight: 500;
+}
+
+/* ----------------------------------------------------
+   Section Headings & Action Cards
+---------------------------------------------------- */
+.section-title-wrap {
+    margin: 1.5rem 0 0.95rem 0;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111827;
+    letter-spacing: -0.02em;
+}
+
+.section-subtitle {
+    font-size: 0.82rem;
+    color: #64748B;
+    margin-top: 0.15rem;
+}
+
+.quick-action-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 1.25rem 1.15rem;
+    text-align: left;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-bottom: 0.5rem;
+}
+
+.quick-action-card:hover {
+    border-color: #93C5FD;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px -4px rgba(37, 99, 235, 0.1);
+}
+
+.action-icon-circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.action-icon-withdraw { background: #FEF2F2; color: #DC2626; border: 1px solid #FEE2E2; }
+.action-icon-deposit { background: #ECFDF5; color: #16A34A; border: 1px solid #D1FAE5; }
+.action-icon-history { background: #EFF6FF; color: #2563EB; border: 1px solid #DBEAFE; }
+
+.action-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.2rem;
+}
+
+.action-card-desc {
+    font-size: 0.82rem;
+    color: #64748B;
+    line-height: 1.35;
+}
+
+/* ----------------------------------------------------
+   Transaction Items & Empty State
+---------------------------------------------------- */
+.transaction-list-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin-top: 0.5rem;
+}
+
+.tx-item-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    transition: all 0.2s ease;
+}
+
+.tx-item-card:hover {
+    border-color: #CBD5E1;
+    box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.05);
+}
+
+.tx-left-col {
+    display: flex;
+    align-items: center;
+    gap: 0.95rem;
+}
+
+.tx-icon-pill {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.tx-icon-deposit { background: #ECFDF5; border: 1px solid #A7F3D0; }
+.tx-icon-withdraw { background: #FEF2F2; border: 1px solid #FECACA; }
+
+.tx-meta-type {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+.tx-meta-date {
+    font-size: 0.78rem;
+    color: #64748B;
+    margin-top: 0.1rem;
+}
+
+.tx-right-col {
+    text-align: right;
+}
+
+.tx-amount-deposit {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #16A34A;
+}
+
+.tx-amount-withdraw {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #DC2626;
+}
+
+.tx-balance-after {
+    font-size: 0.78rem;
+    color: #64748B;
+    margin-top: 0.1rem;
+}
+
+.empty-state-card {
+    background: #FFFFFF;
+    border: 2px dashed #CBD5E1;
+    border-radius: 18px;
+    padding: 2.75rem 1.5rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.empty-state-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+.empty-state-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.2rem;
+}
+
+.empty-state-desc {
+    font-size: 0.85rem;
+    color: #64748B;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* ----------------------------------------------------
+   Panels & Custom Alert Banners
+---------------------------------------------------- */
+.standard-panel-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 18px;
+    padding: 1.5rem 1.75rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    margin-bottom: 1.25rem;
+}
+
+.panel-header {
+    margin-bottom: 1.15rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.panel-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #111827;
+    letter-spacing: -0.02em;
+}
+
+.panel-desc {
+    font-size: 0.85rem;
+    color: #64748B;
+    margin-top: 0.2rem;
+}
+
+.preset-title {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.4rem;
+}
+
+.custom-alert {
+    border-radius: 14px;
+    padding: 0.95rem 1.2rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    border: 1px solid transparent;
+}
+
+.custom-alert-success {
+    background: #DCFCE7;
+    border-color: #86EFAC;
+    color: #14532D;
+}
+
+.custom-alert-danger {
+    background: #FEE2E2;
+    border-color: #FCA5A5;
+    color: #7F1D1D;
+}
+
+.custom-alert-warning {
+    background: #FEF3C7;
+    border-color: #FCD34D;
+    color: #78350F;
+}
+
+.alert-icon {
+    font-size: 1.25rem;
+    line-height: 1;
+}
+
+.alert-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    margin-bottom: 0.15rem;
+}
+
+.alert-text {
+    font-size: 0.82rem;
+    line-height: 1.4;
+}
+
+.criteria-box {
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 0.85rem 1.15rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1.15rem;
+}
+
+.criteria-title {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #334155;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.45rem;
+}
+
+.criteria-item {
+    font-size: 0.82rem;
+    color: #475569;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+/* ============================================================
+   LOGIN / PIN ENTERING PAGE ARCHITECTURE
+   ============================================================ */
+.login-container-wrapper {
+    max-width: 440px;
+    margin: 2rem auto 1rem auto;
+}
+
+.login-wrapper-box {
+    max-width: 100%;
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+    border-radius: 20px 20px 0 0;
+    padding: 2.25rem 2rem 1.75rem 2rem;
+    color: #FFFFFF;
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.2);
+    border: 1px solid #334155;
+    border-bottom: none;
+    text-align: center;
+    position: relative;
+}
+
+.login-brand-icon {
+    font-size: 2.25rem;
+    margin-bottom: 0.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+    width: 60px;
+    height: 60px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.login-title {
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    letter-spacing: -0.03em;
+    margin-top: 0.4rem;
+}
+
+.login-subtitle {
+    font-size: 0.85rem;
+    color: #94A3B8;
+    margin-top: 0.15rem;
+    margin-bottom: 0.25rem;
+}
+
+div[data-testid="stForm"] {
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 18px !important;
+    padding: 1.75rem 1.75rem !important;
+    box-shadow: 0 4px 16px -2px rgba(15, 23, 42, 0.06) !important;
+}
+
+/* ============================================================
+   STREAMLIT BUTTONS & INPUT WIDGET CUSTOMIZATION
+   ============================================================ */
+
+/* Input Fields */
+div[data-baseweb="input"] {
+    border-radius: 10px !important;
+    border: 1.5px solid #CBD5E1 !important;
+    background-color: #FFFFFF !important;
+    transition: all 0.2s ease !important;
+}
+
+div[data-baseweb="input"]:focus-within {
+    border-color: #2563EB !important;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15) !important;
+}
+
+div[data-baseweb="input"] input {
+    color: #111827 !important;
+    font-weight: 500 !important;
+    font-size: 0.95rem !important;
+}
+
+/* ----------------------------------------------------
+   Main Content Buttons (Primary & Secondary)
+---------------------------------------------------- */
+
+/* Primary Buttons across all views and forms */
+.block-container .stButton button[kind="primary"],
+.block-container .stButton button[data-testid="baseButton-primary"],
+div[data-testid="stFormSubmitButton"] > button,
+button[kind="primaryFormSubmit"],
+button[data-testid="baseButton-primaryFormSubmit"] {
+    background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%) !important;
+    background-color: #2563EB !important;
+    border: 1px solid #2563EB !important;
+    color: #FFFFFF !important;
+    border-radius: 12px !important;
+    padding: 0.6rem 1.25rem !important;
+    font-weight: 600 !important;
+    font-size: 0.92rem !important;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.block-container .stButton button[kind="primary"] *,
+.block-container .stButton button[data-testid="baseButton-primary"] *,
+div[data-testid="stFormSubmitButton"] > button *,
+button[kind="primaryFormSubmit"] *,
+button[data-testid="baseButton-primaryFormSubmit"] * {
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+.block-container .stButton button[kind="primary"]:hover,
+.block-container .stButton button[data-testid="baseButton-primary"]:hover,
+div[data-testid="stFormSubmitButton"] > button:hover,
+button[kind="primaryFormSubmit"]:hover,
+button[data-testid="baseButton-primaryFormSubmit"]:hover {
+    background: #1D4ED8 !important;
+    background-color: #1D4ED8 !important;
+    border-color: #1E40AF !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4) !important;
+}
+
+/* Secondary Buttons in Main Content (Top Nav, Presets, Quick Actions) */
+.block-container .stButton button[kind="secondary"],
+.block-container .stButton button[data-testid="baseButton-secondary"],
+.block-container .stButton button:not([kind="primary"]):not([data-testid="baseButton-primary"]) {
+    background: #FFFFFF !important;
+    background-color: #FFFFFF !important;
+    border: 1.5px solid #CBD5E1 !important;
+    color: #1E293B !important;
+    border-radius: 10px !important;
+    padding: 0.5rem 0.9rem !important;
+    font-weight: 600 !important;
+    font-size: 0.88rem !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.block-container .stButton button[kind="secondary"] *,
+.block-container .stButton button[data-testid="baseButton-secondary"] *,
+.block-container .stButton button:not([kind="primary"]):not([data-testid="baseButton-primary"]) * {
+    color: #1E293B !important;
+    font-weight: 600 !important;
+}
+
+.block-container .stButton button[kind="secondary"]:hover,
+.block-container .stButton button[data-testid="baseButton-secondary"]:hover,
+.block-container .stButton button:not([kind="primary"]):not([data-testid="baseButton-primary"]):hover {
+    background: #F8FAFC !important;
+    background-color: #F8FAFC !important;
+    border-color: #2563EB !important;
+    color: #2563EB !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.12) !important;
+}
+
+.block-container .stButton button[kind="secondary"]:hover *,
+.block-container .stButton button[data-testid="baseButton-secondary"]:hover *,
+.block-container .stButton button:not([kind="primary"]):not([data-testid="baseButton-primary"]):hover * {
+    color: #2563EB !important;
+}
+
+/* ============================================================
+   MOBILE RESPONSIVE OPTIMIZATIONS
+   ============================================================ */
+@media (max-width: 768px) {
+    .block-container {
+        padding-top: 1.5rem !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    .hero-balance-card {
+        padding: 1.5rem 1.25rem !important;
+    }
+    .balance-amount-display {
+        font-size: 2rem !important;
+    }
+    .login-container-wrapper {
+        margin: 1rem auto !important;
+        padding: 0 0.5rem !important;
+    }
+    .greeting-title {
+        font-size: 1.3rem !important;
+    }
+}

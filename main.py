@@ -1,43 +1,52 @@
+"""CLI Application Entrypoint for ATM Simulation.
+
+Run with:
+    python main.py
+"""
+
+import sys
 from database import Database
 from account import Account
 from atm import ATM
 
 
-print("==============================")
-print("       🏧 WELCOME TO ATM")
-print("==============================")
+def main() -> None:
+    """Initializes and runs the CLI ATM simulation."""
+    print("==========================================")
+    print("       🏧 WELCOME TO DIGITAL ATM")
+    print("==========================================")
+
+    # Initialize SQLite database
+    database = Database()
+
+    # Load account record from database
+    account_data = database.get_account()
+
+    if account_data:
+        account_id, pin, balance = account_data
+
+        # Instantiate Account domain model
+        account = Account(
+            account_id=account_id,
+            pin=pin,
+            balance=balance,
+            database=database
+        )
+
+        # Initialize ATM terminal interface
+        atm = ATM(account)
+
+        # Authenticate and open main menu
+        if atm.login():
+            atm.menu()
+    else:
+        print("❌ Error: No bank account found in database.")
+        print("Please check database configuration.")
 
 
-# Create database
-database = Database()
-
-
-# Get account from database
-account_data = database.get_account()
-
-
-if account_data:
-
-    account_id = account_data[0]
-    pin = account_data[1]
-    balance = account_data[2]
-
-    # Create Account object
-    account = Account(
-        account_id=account_id,
-        pin=pin,
-        balance=balance,
-        database=database
-    )
-
-    # Create ATM
-    atm = ATM(account)
-
-    # Login
-    if atm.login():
-
-        atm.menu()
-
-else:
-
-    print("❌ Account not found.")
+if __name__ == "__main__":
+    try:
+        main()
+    except (KeyboardInterrupt, EOFError):
+        print("\n\nSession terminated. Goodbye! 👋")
+        sys.exit(0)

@@ -1,5 +1,24 @@
+# SQLite Database
 atm.db
+*.db
+*.sqlite3
+
+# Python Bytecode & Cache
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Virtual Environments
 .venv/
+env/
+venv/
+ENV/
+
+# Environment Variables & IDE
 .env
+.vscode/
+.idea/
+.DS_Store
