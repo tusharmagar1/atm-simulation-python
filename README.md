@@ -1,30 +1,33 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:1a1200,100:E8A93B&height=200&section=header&text=AI%20E-Book%20RAG%20Assistant&fontSize=38&fontColor=E8A93B&animation=fadeIn&desc=Chat%20with%20your%20e-books%20using%20Groq%20LLMs%20%2B%20ChromaDB&descAlignY=62&descSize=17&fontColor=ffffff" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F2027,50:203A43,100:2C5364&height=220&section=header&text=ATM%20Simulation%20%26%20Digital%20Banking&fontSize=34&fontColor=ffffff&animation=fadeIn&desc=Python%20%E2%80%A2%20Streamlit%20%E2%80%A2%20SQLite%20%E2%80%A2%20OOP%20Banking%20Engine&descAlignY=64&descSize=17" width="100%"/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=E8A93B&center=true&vCenter=true&width=650&lines=%F0%9F%93%9A+Multi-Format+Book+Ingestion;%F0%9F%A7%A0+RAG+with+ChromaDB+%2B+HuggingFace+Embeddings;%E2%9A%A1+Groq+LLM+Streaming+Chat;%F0%9F%8E%93+AI+Quizzes%2C+Flashcards+%26+Notes;%F0%9F%94%92+Multi-Tenant+User+Isolation" alt="Typing SVG" />
-
-<br/>
-
-[![python](https://img.shields.io/badge/python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)](#)
-[![fastapi](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](#)
-[![react](https://img.shields.io/badge/React_18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](#)
-[![groq](https://img.shields.io/badge/Groq-LLM-F55036?style=for-the-badge&logo=lightning&logoColor=white)](#)
-[![chromadb](https://img.shields.io/badge/ChromaDB-vector%20store-6E56CF?style=for-the-badge)](#)
-[![license](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](#-license)
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=2C5364&center=true&vCenter=true&width=650&lines=%F0%9F%94%90+Secure+PIN+Authentication;%E2%9A%A1+ACID+Atomic+Transactions;%F0%9F%92%B3+Luxury+Fintech+Dashboard;%F0%9F%92%BB+Terminal+CLI+%2B+Web+GUI;%E2%9C%85+27+Automated+Unit+Tests" alt="Typing SVG" />
 
 <br/>
 
-<img src="https://skillicons.dev/icons?i=python,fastapi,react,vite,ts,tailwind,sqlite,docker&theme=dark" />
+[![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.40+-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://streamlit.io/)
+[![SQLite](https://img.shields.io/badge/SQLite-3-003B57?style=for-the-badge&logo=sqlite&logoColor=white)](https://www.sqlite.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
+[![Tests](https://img.shields.io/badge/Tests-27%20Passed-success?style=for-the-badge)]()
+
+![GitHub last commit](https://img.shields.io/github/last-commit/tusharmagar1/atm-simulation-python?style=flat-square&color=2C5364&label=last%20commit)
+![GitHub repo size](https://img.shields.io/github/repo-size/tusharmagar1/atm-simulation-python?style=flat-square&color=0F2027&label=repo%20size)
+![GitHub stars](https://img.shields.io/github/stars/tusharmagar1/atm-simulation-python?style=flat-square&color=yellow&label=stars)
+
+<br/>
+
+<img src="https://skillicons.dev/icons?i=python,sqlite,git,vscode&theme=dark" />
 
 <br/><br/>
 
-**[✨ Highlights](#-key-features--highlights)** &nbsp;•&nbsp;
-**[📸 Screenshots](#-screenshots)** &nbsp;•&nbsp;
-**[🏗 Structure](#%EF%B8%8F-folder-structure)** &nbsp;•&nbsp;
-**[🛠 Tech Stack](#%EF%B8%8F-tech-stack)** &nbsp;•&nbsp;
-**[🚀 Quick Start](#-local-quick-start)** &nbsp;•&nbsp;
-**[📦 Deploy to GitHub](#-how-to-upload-project-to-github)**
+**[✨ Highlights](#-features--highlights)** &nbsp;•&nbsp;
+**[📸 Interfaces](#-key-interfaces)** &nbsp;•&nbsp;
+**[🛠 Tech Stack](#%EF%B8%8F-tech-stack--concepts)** &nbsp;•&nbsp;
+**[🚀 Quick Start](#-quick-start-guide)** &nbsp;•&nbsp;
+**[🧪 Testing](#-automated-testing)** &nbsp;•&nbsp;
+**[🛡️ Security](#%EF%B8%8F-security--reliability-features)**
 
 </div>
 
@@ -32,276 +35,230 @@
 
 ## 📌 Overview
 
-A production-ready **Retrieval-Augmented Generation (RAG)** application for
-uploading e-books (PDF, EPUB, DOCX, TXT), building a high-speed vector database
-with **ChromaDB** & **HuggingFace Embeddings** (`BAAI/bge-small-en-v1.5`), and
-conversing with content using **Groq LLMs** (`llama-3.3-70b-versatile`).
-
-Featuring a **pitch-black tactile design system**, **ambient WebGL shader rays**,
-**multi-tenant user isolation**, **route-level code splitting**, and **shimmer
-loading skeletons** — this isn't a weekend RAG demo, it's built like a real product.
+A high-fidelity, portfolio-ready **ATM Simulation and Digital Banking Application**
+built with **Python**, **Streamlit**, **SQLite**, and **Object-Oriented
+Programming (OOP)**. The project ships **two** complete interfaces — a modern
+web-based banking dashboard with a luxury fintech design system, and a
+full-featured terminal CLI — backed by the same atomic, transaction-safe data
+layer underneath.
 
 <br/>
 
-## 📸 Screenshots
+## 💡 Why This Project Stands Out
 
 <table>
 <tr>
-<td width="50%">
-
-**🔐 Sign In**
-<img src="assets/screenshots/signin.png" width="100%"/>
-
-</td>
-<td width="50%">
-
-**📝 Create Account**
-<img src="assets/screenshots/signup.png" width="100%"/>
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-**📊 Dashboard**
-<img src="assets/screenshots/dashboard.png" width="100%"/>
-
-</td>
-<td width="50%">
-
-**📚 Library**
-<img src="assets/screenshots/library.png" width="100%"/>
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-**💬 AI Reading Chat**
-<img src="assets/screenshots/ai-chat.png" width="100%"/>
-
-</td>
-<td width="50%">
-
-**🎓 AI Study Suite**
-<img src="assets/screenshots/study-suite.png" width="100%"/>
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-**🔍 Semantic Search**
-<img src="assets/screenshots/semantic-search.png" width="100%"/>
-
-</td>
-<td width="50%">
-
-**🛠️ Dev Debugger**
-<img src="assets/screenshots/dev-debugger.png" width="100%"/>
-
-</td>
+<td align="center" width="25%">⚡<br/><b>ACID Transactions</b><br/><sub>Atomic commit/rollback, no desync</sub></td>
+<td align="center" width="25%">🖥️<br/><b>Dual Interface</b><br/><sub>Web dashboard + terminal CLI</sub></td>
+<td align="center" width="25%">🧪<br/><b>27 Unit Tests</b><br/><sub>Domain, DB & CLI coverage</sub></td>
+<td align="center" width="25%">🎨<br/><b>Fintech Design</b><br/><sub>Custom glassmorphism CSS system</sub></td>
 </tr>
 </table>
 
-<details>
-<summary><b>⚙️ Settings — accent themes & model config</b></summary>
-<br/>
-<img src="assets/screenshots/settings.png" width="100%"/>
-</details>
-
 <br/>
 
-## 🌟 Key Features & Highlights
+## 📸 Key Interfaces
 
-### 🔒 Core RAG & Multi-Tenant Security
-- **Multi-tenant user scoping** — complete database isolation per user for books, chat histories, settings, and generated study notes
-- **Backend-enforced API security** — `GROQ_API_KEY` is managed strictly on the server (`backend/.env`); client browsers never store or expose API keys
-- **Multi-format document ingestion** — PDF, EPUB, DOCX, and TXT with automatic cover extraction, page indexing, and chapter detection
-- **Sentence-aware chunker** — recursive character text splitter with configurable window sizes and overlap thresholds
-- **Local vector database (ChromaDB)** — HuggingFace `BAAI/bge-small-en-v1.5` embeddings (384 dimensions) with cosine similarity and MMR retrieval
+- **🖥️ Web GUI (Streamlit)** — high-contrast fintech dashboard featuring balance
+  hero cards, instant transaction presets, interactive statements, and
+  real-time security alerts.
+- **⌨️ Terminal CLI (Command Line)** — full console-based ATM experience with
+  interactive menus, masked PIN inputs, and tabular receipts.
 
-### 🎨 Next-Gen UI & Visual Aesthetics
-- **Pitch-black dark mode (`#000000`)** — deep pitch-black base palette with sleek neumorphic tactile surfaces and custom accent themes (Gold, Red, White)
-- **Ambient WebGL background (`SideRays`)** — real-time WebGL shader light rays powered by `ogl`, rendering across all pages
-- **MagicCard spotlight forms** — cursor-tracking gradient spotlight effect on Login and Signup cards
-- **Ruixen gradient footer** — viewport-pinned animated rainbow gradient footer on Dashboard and Settings pages
-- **CLS prevention & shimmer skeletons** — route code-splitting with `React.lazy`/`Suspense`, layout-matching page skeletons, lazy image loading, and 3D isometric loaders
-
-### 🎓 AI Reading & Study Suite
-- **Interactive AI reading chat** — streaming SSE responses, Markdown rendering with Tokyo Night Dark code highlighting, citation side-drawers, and session management
-- **Book & chapter summarizer** — instant Bullet, Detailed, and Academic summary generation
-- **Quiz generator** — automated MCQs, True/False, and short-answer quizzes with difficulty controls and scoring
-- **Study flashcards** — animated flip-card deck with question, answer, and memory retention hints
-- **AI smart notes** — save, edit, and export Markdown research notes
-- **Dev debugger panel** — live vector database scorer, chunk boundary inspection, and collection metrics
+> *(Add screenshots of the dashboard and CLI here — e.g.
+> `assets/screenshots/dashboard.png` and `assets/screenshots/cli.png` — a
+> visual of the balance hero card and glassmorphism styling sells this
+> project immediately.)*
 
 <br/>
 
-## 🏗️ Folder Structure
+## 🌟 Features & Highlights
 
-```text
-ebook-rag/
-├── backend/
-│   ├── app/
-│   │   ├── api/          # FastAPI endpoints (auth, books, chat, search, ai_tools, debug, settings)
-│   │   ├── core/         # Security, Pydantic settings & env config
-│   │   ├── db/           # SQLAlchemy database session & migration helpers
-│   │   ├── models/       # Database ORM schemas (User, UserSetting, Book, DocumentChunk, ChatSession, ChatMessage, AINote)
-│   │   ├── schemas/      # Pydantic request/response schemas
-│   │   ├── services/     # Settings, Auth, Book, Chat, Search, and AI Tools logic
-│   │   └── rag/          # RAG pipeline (parsers, chunker, embeddings, vectorstore, retriever)
-│   ├── requirements.txt  # Python backend dependencies
-│   └── main.py           # FastAPI entrypoint
-├── frontend/
-│   ├── public/           # Static assets & brand logo PNGs
-│   ├── src/
-│   │   ├── components/   # Modular UI primitives, skeletons, loaders, SideRays, MagicCard, Navbar, AppFooter
-│   │   ├── context/      # AuthContext, AppContext, ColorThemeContext
-│   │   ├── pages/        # Dashboard, Library, Chat, AITools, Search, DevTools, Settings, AuthPage
-│   │   └── services/     # Axios API client & SSE ReadableStream fetcher
-│   ├── package.json      # Vite, React 18, Tailwind CSS, Framer Motion, OGL dependencies
-│   └── vite.config.ts    # Build & proxy config
-├── assets/
-│   └── screenshots/       # README screenshots
-└── README.md
+### 💳 Core Banking Operations
+- **🔐 Secure PIN authentication** — 4-digit numeric PIN authentication with validation, error handling, and session state protection
+- **💰 Real-time balance tracking** — instant balance inquiries displayed via a luxury debit card component with auto-sync indicators
+- **📈 Financial insights & analytics** — real-time summary metrics tracking lifetime deposits, total cash withdrawals, and logged transaction events
+- **💵 Quick & custom deposits** — instant preset deposit buttons (`₹500`, `₹1,000`, `₹2,000`, `₹5,000`) and custom amount inputs with atomic balance synchronization
+- **💸 Safe cash withdrawals** — real-time balance validation, insufficient funds warnings, denomination guidelines, and atomic deductions
+- **🧾 Comprehensive transaction history** — reverse-chronological transaction statements with color-coded badges (`+` green for deposits, `-` red for withdrawals), post-transaction balances, and ISO timestamps
+- **🔑 Self-service PIN management** — PIN change flow with current PIN authentication, 4-digit numeric validation, and match confirmation
+
+### 🛡️ Enterprise Architecture & Security
+- **⚡ ACID atomic transactions** — database balance updates and transaction logging execute within atomic `BEGIN TRANSACTION`, `COMMIT`, and `ROLLBACK` blocks to prevent desynchronization
+- **🔒 SQL injection prevention** — all database queries use parameterized SQL placeholders (`?`)
+- **🔗 Relational data integrity** — SQLite foreign key constraints (`PRAGMA foreign_keys = ON;`) enforced across accounts and transactions
+- **🎨 Custom fintech design system** — pure CSS design tokens (`style.css`), Inter typography, glassmorphism cards, glowing pulse indicators, and responsive mobile breakpoints
+
+<br/>
+
+## 🧬 How a Transaction Stays Safe
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant App as Streamlit App
+    participant DB as SQLite (atm.db)
+
+    User->>App: Withdraw ₹2,000
+    App->>DB: BEGIN TRANSACTION
+    App->>DB: Validate balance ≥ amount
+    alt Sufficient funds
+        App->>DB: UPDATE balance
+        App->>DB: INSERT transaction log
+        App->>DB: COMMIT
+        DB-->>App: Success
+        App-->>User: ✅ New balance shown
+    else Insufficient funds / error
+        App->>DB: ROLLBACK
+        DB-->>App: No changes applied
+        App-->>User: ⚠️ Transaction declined
+    end
+```
+
+This is the core guarantee of the whole system: **a balance update and its
+transaction log entry either both happen, or neither does** — there's no state
+where money moves but the receipt doesn't get written, or vice versa.
+
+<br/>
+
+## 🏗️ Project Architecture & File Structure
+
+```
+ATM-Simulation/
+│
+├── app.py                 # Streamlit Web Application (Frontend & Routing Controller)
+├── style.css              # Custom Fintech Design System (CSS3 Styles & Animations)
+├── main.py                # Terminal CLI Application Entrypoint
+├── atm.py                 # Terminal ATM Controller & Interactive Menu Logic
+├── account.py             # Domain Model & Banking Business Logic
+├── database.py            # SQLite Persistence Layer & Atomic Transactions
+├── atm.db                 # Persistent SQLite Database (Auto-generated on first run)
+│
+├── tests/                 # Automated Unit Testing Suite (27 Test Cases)
+│   ├── __init__.py
+│   ├── test_account.py    # Account Model & Validation Tests
+│   ├── test_database.py   # SQLite Transactions & Atomicity Tests
+│   └── test_atm.py        # CLI ATM Interface Tests
+│
+├── pyrefly.toml           # Project Configuration
+├── README.md              # Project Documentation
+├── .gitignore             # Git Ignore Configuration
+└── LICENSE                # MIT License
 ```
 
 <br/>
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack & Concepts
 
-### Backend
-| Component | Technology |
+| Component | Technology / Pattern |
 |---|---|
-| Framework | FastAPI (Python 3.10+) & Uvicorn |
-| Database | SQLite & SQLAlchemy ORM |
-| LLM Engine | Groq API (`llama-3.3-70b-versatile`, `llama-3.1-8b-instant`, `deepseek-r1-distill-llama-70b`) |
-| Embeddings | HuggingFace `BAAI/bge-small-en-v1.5` via `sentence-transformers` & `langchain-huggingface` |
-| Vector Store | ChromaDB |
-| Document Parsers | PyMuPDF (`fitz`), EbookLib, `python-docx`, BeautifulSoup4 |
+| **Language** | Python 3.8+ (Type-hinted, PEP 8 compliant) |
+| **Web Framework** | Streamlit |
+| **Styling** | Custom CSS3 (`style.css`), Google Inter Fonts, Flexbox/Grid |
+| **Database** | SQLite3 (embedded, persistent relational storage) |
+| **Design Paradigm** | Object-Oriented Programming (OOP) & Domain-Driven Design |
+| **Testing** | Python standard `unittest` framework |
 
-### Frontend
-| Component | Technology |
+<br/>
+
+## 🚀 Quick Start Guide
+
+<details open>
+<summary><b>1️⃣ Clone the repository</b></summary>
+
+```bash
+git clone https://github.com/tusharmagar1/atm-simulation-python.git
+cd ATM-Simulation
+```
+</details>
+
+<details open>
+<summary><b>2️⃣ Install dependencies</b></summary>
+
+Ensure Python is installed, then install Streamlit:
+```bash
+pip install streamlit
+```
+</details>
+
+<details open>
+<summary><b>3️⃣ Launch the web application</b></summary>
+
+```bash
+streamlit run app.py
+```
+> The web app will launch automatically at **`http://localhost:8501`**.
+</details>
+
+<details>
+<summary><b>4️⃣ Launch the terminal CLI (optional)</b></summary>
+
+```bash
+python main.py
+```
+</details>
+
+<br/>
+
+## 🔑 Default Credentials
+
+The database is pre-seeded with a default demo account upon first launch:
+
+| Credential | Default Value |
 |---|---|
-| Framework | React 18 + Vite + TypeScript |
-| Styling | Tailwind CSS + custom pitch-black neumorphic design system |
-| WebGL Shader | `ogl` (SideRays light background) |
-| Animations | Framer Motion |
-| Icons | Lucide React |
-| Markdown Highlighting | React-Markdown + Rehype-Highlight (Tokyo Night Dark) |
+| **Account ID** | `ACC-0001` (ID: `1`) |
+| **Default Security PIN** | `1234` |
+| **Initial Starting Balance** | `₹10,000.00` |
 
 <br/>
 
-## 🚀 Local Quick Start
+## 🧪 Automated Testing
 
-### 1. Backend Setup
+The project includes an automated test suite containing **27 unit tests**
+covering the domain layer, database persistence, transaction rollbacks, and
+CLI menus.
 
+Run all tests from the root directory:
 ```bash
-# Navigate to backend directory
-cd backend
-
-# Create virtual environment
-python -m venv venv
-
-# Activate virtual environment
-# Windows (PowerShell):
-.\venv\Scripts\activate
-# Linux / macOS:
-# source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Create .env file from .env.example
-cp .env.example .env
-
-# Add your Groq API Key in backend/.env:
-# GROQ_API_KEY=gsk_your_groq_key_here
-
-# Run backend development server
-uvicorn app.main:app --reload --port 8000
+python -m unittest discover tests -v
 ```
 
-Backend API runs at **`http://127.0.0.1:8000`** (interactive Swagger docs at
-`http://127.0.0.1:8000/docs`).
-
-### 2. Frontend Setup
-
-```bash
-# Navigate to frontend directory
-cd frontend
-
-# Install node dependencies
-npm install
-
-# Run frontend development server
-npm run dev
-```
-
-Frontend web app runs at **`http://localhost:5173`**.
+### Test Coverage Highlights
+- ✅ **`test_account.py`** — initial balance integrity, positive deposits, zero/negative rejection, insufficient funds handling, and PIN update validations
+- ✅ **`test_database.py`** — SQLite schema creation, default seeding, parameterized updates, atomic rollbacks on failure, and persistence across reconnects
+- ✅ **`test_atm.py`** — CLI login authentication, masked PIN input, withdrawal/deposit workflows, and balance inquiries
 
 <br/>
 
-## 📦 How to Upload Project to GitHub
+## 🛡️ Security & Reliability Features
 
-Follow these steps to upload your repository to GitHub securely without exposing
-secret environment variables or local vector binaries.
-
-<details>
-<summary><b>Step 1 — Verify Git status</b></summary>
-<br/>
-
-Ensure you are in the root `ebook-rag` directory and check that `.env` and
-`venv` are ignored:
-```bash
-git status
-```
-</details>
-
-<details>
-<summary><b>Step 2 — Initialize & commit code</b></summary>
-<br/>
-
-```bash
-# Initialize git repository (if not initialized)
-git init
-
-# Stage all files
-git add .
-
-# Create initial commit
-git commit -m "feat: complete EBook RAG Tactile Suite with WebGL SideRays, skeleton loading, and multi-tenant security"
-```
-</details>
-
-<details>
-<summary><b>Step 3 — Create GitHub repository & push</b></summary>
-<br/>
-
-1. Go to [GitHub New Repository](https://github.com/new).
-2. Enter repository name (e.g. `ebook-rag`).
-3. Leave **"Initialize with README" unchecked** (since we already have a custom `README.md`).
-4. Click **Create repository**.
-5. Copy the terminal commands shown on GitHub and run them in your root directory:
-
-```bash
-# Set default branch to main
-git branch -M main
-
-# Add remote origin URL (replace URL with your repository link)
-git remote add origin https://github.com/tusharmagar1/ebook-rag.git
-
-# Push code to GitHub
-git push -u origin main
-```
-</details>
+1. **Foreign key enforcement** — `PRAGMA foreign_keys = ON;` is enforced on every database connection
+2. **Transaction rollback protection** — if any error occurs while logging a transaction, the entire transaction is rolled back so balances never go out of sync
+3. **Floating point rounding** — monetary amounts are rounded to 2 decimal places to eliminate floating point imprecision
+4. **Auto-recovery** — if `atm.db` is deleted or corrupted, the system automatically recreates tables and seeds the default demo account on startup
 
 <br/>
 
-## 📜 License
+## 📈 Roadmap
 
-Distributed under the [MIT License](LICENSE).
+- [ ] Multi-account support with account switching
+- [ ] Transaction export (CSV/PDF statement download)
+- [ ] Interest-bearing savings account simulation
+- [ ] Dockerized deployment
+- [ ] Role-based admin panel for account management
+
+<br/>
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the
+[issues page](https://github.com/tusharmagar1/atm-simulation-python/issues).
+
+<br/>
+
+## 📄 License
+
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
 
 <br/>
 
@@ -318,6 +275,6 @@ Distributed under the [MIT License](LICENSE).
 
 If you found this project useful, consider giving it a star on GitHub.
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:E8A93B,50:1a1200,100:000000&height=150&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2C5364,50:203A43,100:0F2027&height=150&section=footer" width="100%"/>
 
 </div>
